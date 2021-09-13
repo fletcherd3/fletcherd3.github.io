@@ -1,19 +1,19 @@
 <template>
   <v-app>
     <v-overlay
-      :value="drawer"
-      z-index="4"
-      opacity="0.05"
+        :value="drawer"
+        opacity="0.05"
+        z-index="4"
     >
     </v-overlay>
     <v-navigation-drawer
-      v-model="drawer"
-      app
-      clipped
-      hide-overlay
-      :style="{ top: $vuetify.application.top + 'px', zIndex: 4 }"
+        v-model="drawer"
+        :style="{ top: $vuetify.application.top + 'px', zIndex: 4 }"
+        app
+        clipped
+        hide-overlay
     >
-    <v-list-item>
+      <v-list-item>
         <v-list-item-content>
           <v-list-item-title class="text-h6">
             Scroll to
@@ -23,13 +23,13 @@
 
       <v-divider></v-divider>
       <v-list
-        dense
-        nav
+          dense
+          nav
       >
         <v-list-item
-          v-for="item in items"
-          :key="item.title"
-          link
+            v-for="item in items"
+            :key="item.title"
+            link
         >
           <v-list-item-icon>
             <v-icon>{{ item.icon }}</v-icon>
@@ -43,25 +43,23 @@
     </v-navigation-drawer>
 
     <v-app-bar
-      clipped-left
-      app
-      dense
-      flat
-      hide-on-scroll
-      color="white"
+        app
+        clipped-left
+        color="white"
+        dense
+        flat
+        hide-on-scroll
     >
       <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
-      <!-- <v-toolbar-title>Fletcher Dick</v-toolbar-title> -->
     </v-app-bar>
 
-    <v-main id="app">
+    <v-main id="app" class="pa-2 mx-auto">
       <main-view/>
     </v-main>
   </v-app>
 </template>
 
 <script>
-// import HelloWorld from './components/HelloWorld';
 import MainView from './views/MainView.vue';
 
 export default {
@@ -75,22 +73,21 @@ export default {
     return {
       drawer: false,
       items: [
-            { title: 'Dashboard', icon: 'mdi-view-dashboard' },
-            { title: 'Photos', icon: 'mdi-image' },
-            { title: 'About', icon: 'mdi-help-box' },
-          ]
-      }
+        {title: 'Dashboard', icon: 'mdi-view-dashboard'},
+        {title: 'Photos', icon: 'mdi-image'},
+        {title: 'About', icon: 'mdi-help-box'},
+      ]
+    }
   }
-    
+
 };
 </script>
 
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Open Sans', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
 }
 </style>
