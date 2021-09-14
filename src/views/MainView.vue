@@ -20,14 +20,14 @@
         Welcome to my portfolio! There's going to be a lot changing around here 😮
       </v-row>
       <v-row class="mt-16" justify="center">
+        <!-- Link created at https://sites.google.com/site/gdocs2direct/home -->
         <v-btn
             class="ma-2"
             color="indigo"
-            href="https://drive.google.com/file/d/1qUQ--AQqD0bHSLeDrIdRflzsyAQ0IyO5/view?usp=sharing"
+            href="https://drive.google.com/uc?export=download&id=1qUQ--AQqD0bHSLeDrIdRflzsyAQ0IyO5"
             outlined
-            target="_blank"
         >
-          My Resume
+          Download CV
         </v-btn>
       </v-row>
     </v-container>

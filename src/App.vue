@@ -23,7 +23,8 @@ export default {
     return {}
   },
   beforeMount() {
-    console.log("Hey! What do you think you're doing back here?");
+    console.log("%cHey! What do you think you're doing back here?",
+        "color: orange; font-family: sans-serif; font-size: 2em; font-weight: bolder;");
   }
 
 };
