@@ -20,8 +20,10 @@ export default {
   },
 
   data() {
-    return {
-    }
+    return {}
+  },
+  beforeMount() {
+    console.log("Hey! What do you think you're doing back here?");
   }
 
 };
