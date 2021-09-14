@@ -2,7 +2,6 @@
   <v-container style="padding:0">
     <v-overlay
         :value="drawer"
-        dense
         opacity="0.05"
         z-index="4"
     >
@@ -46,10 +45,11 @@
     <v-app-bar
         app
         clipped-left
-        color="white"
-        dense
+        :collapse="!drawer"
         flat
-        hide-on-scroll
+        :style="[drawer ? {} : {'width': '58px'}]"
+        dark
+        dense
     >
       <v-app-bar-nav-icon @click.stop="drawer = !drawer"/>
     </v-app-bar>
