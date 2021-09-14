@@ -1,11 +1,13 @@
 <template>
   <!-- Introduction section -->
-  <v-container>
-    <v-container fill-height>
+  <v-container class="root">
+    <v-container class="elevation-16 pa-10">
       <v-row
           align="center"
           fluid
+          justify="center"
           style="height: 100vh;"
+
       >
         <div class="pb-16 mt-n16">
           <v-row>
@@ -25,7 +27,7 @@
             <v-btn
                 class="ma-2"
                 color="indigo"
-                href="https://drive.google.com/file/d/1NdNbbqZVTVeapiALfIDcFvOY0rprdotP/view?usp=sharing"
+                href="https://drive.google.com/file/d/1qUQ--AQqD0bHSLeDrIdRflzsyAQ0IyO5/view?usp=sharing"
                 outlined
                 target="_blank"
             >
@@ -34,19 +36,34 @@
           </v-row>
         </div>
       </v-row>
-
     </v-container>
 
-    <headline text="Fletcher Dick"/>
-    <headline text="Fletcher Dick"/>
-    <headline text="Fletcher Dick"/>
-    <headline text="Fletcher Dick"/>
-    <headline text="Fletcher Dick"/>
-    <headline text="Fletcher Dick"/>
-    <headline text="Fletcher Dick"/>
-    <headline text="Fletcher Dick"/>
-    <headline text="Fletcher Dick"/>
-    <headline text="Fletcher Dick"/>
+    <v-container class="pt-7">
+      <v-row justify="center">
+        Quick Links hi
+      </v-row>
+      <v-row>
+        <v-col
+            align="center"
+            cols="12"
+            justify="center" sm="4">
+          <em class="fab fa-linkedin fa-2x" v-bind:style="{ color: iconColour }"/>
+        </v-col>
+        <v-col
+            align="center"
+            cols="12"
+            justify="center" sm="4">
+          <em class="fab fa-linkedin fa-2x" v-bind:style="{ color: iconColour }"/>
+        </v-col>
+        <v-col
+            align="center"
+            cols="12"
+            justify="center" sm="4">
+          <em class="fab fa-linkedin fa-2x" v-bind:style="{ color: iconColour }"/>
+        </v-col>
+      </v-row>
+    </v-container>
+
   </v-container>
 </template>
 
@@ -57,11 +74,22 @@ export default {
   name: 'MainView',
   components: {
     Headline
+  },
+  data() {
+    return {
+      iconColour: 'Tomato'
+    }
   }
 }
 </script>
 
 <style scoped>
+.root {
+  padding: 0 0 100px;
+  width: 100% !important;
+}
 
-
+.container {
+  max-width: 100% !important;
+}
 </style>
