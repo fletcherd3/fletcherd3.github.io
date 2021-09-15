@@ -123,6 +123,20 @@
         </v-layout>
       </v-layout>
     </v-container>
+    <v-container class="py-7">
+      <v-row justify="center">
+        <h4>Timeline</h4>
+      </v-row>
+      <v-row justify="center">
+        <v-timeline>
+          <v-timeline-item>timeline item</v-timeline-item>
+          <v-timeline-item class="text-right">
+            timeline item
+          </v-timeline-item>
+          <v-timeline-item>timeline item</v-timeline-item>
+        </v-timeline>
+      </v-row>
+    </v-container>
   </v-container>
 </template>
 
