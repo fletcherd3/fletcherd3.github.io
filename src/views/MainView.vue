@@ -69,7 +69,8 @@
         <h1>My Projects</h1>
       </v-row>
       <v-layout justify-center>
-        <v-layout :class="{'skinny': $vuetify.breakpoint.smAndUp}" justify-center row>
+        <v-layout :class="{'skinny': $vuetify.breakpoint.smAndUp}" justify-center row
+                  style="{'max-width': '100%';}">
           <v-flex
               v-for="x in 5"
               :key="x"
