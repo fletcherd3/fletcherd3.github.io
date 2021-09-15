@@ -42,7 +42,7 @@
       </v-row>
     </v-container>
 
-    <v-container class="py-7">
+    <v-container id="quick-links" class="py-7">
       <v-row justify="center">
         <h4>Quick Links</h4>
       </v-row>
@@ -64,164 +64,64 @@
       </v-row>
     </v-container>
 
-    <v-container class="pt-7 elevation-8" color="black">
-      <v-card
-          :loading="loading"
-          class="mx-auto my-12"
-          max-width="374"
-      >
-        <template slot="progress">
-          <v-progress-linear
-              color="deep-purple"
-              height="10"
-              indeterminate
-          ></v-progress-linear>
-        </template>
-
-        <v-img
-            height="250"
-            src="https://cdn.vuetifyjs.com/images/cards/cooking.png"
-        ></v-img>
-
-        <v-card-title>Cafe Badilico</v-card-title>
-
-        <v-card-text>
-          <v-row
-              align="center"
-              class="mx-0"
+    <v-container id="projects" class="pt-7 elevation-8">
+      <v-row class="mb-4" justify="center">
+        <h1>My Projects</h1>
+      </v-row>
+      <v-layout justify-center>
+        <v-layout :class="{'skinny': $vuetify.breakpoint.smAndUp}" justify-center row>
+          <v-flex
+              v-for="x in 5"
+              :key="x"
+              class="col-12 col-md-6"
           >
-            <v-rating
-                :value="4.5"
-                color="amber"
-                dense
-                half-increments
-                readonly
-                size="14"
-            ></v-rating>
+            <v-card>
+              <v-img
+                  height="250"
+                  src="https://cdn.vuetifyjs.com/images/cards/cooking.png"
+              ></v-img>
+              <v-card-title>Project name</v-card-title>
+              <v-card-text>
+                <v-row align="center mx-0">
+                  <v-chip
+                      v-for="x in 3"
+                      :key="x"
+                      :color="iconColour"
+                      class="mr-1"
+                      outlined
+                      small
+                  >
+                    Tech {{ x }}
+                  </v-chip>
+                </v-row>
+                <v-card-subtitle class="px-0">Small plates, salads & sandwiches - an intimate
+                  setting with 12 indoor seats plus patio seating
+                </v-card-subtitle>
+                <v-card-actions>
+                  <v-btn
+                      color="indigo"
+                      href="http://google.com"
+                      icon
+                      target="_blank"
+                  >
+                    <em class="fa-2x fab fa-github" v-bind:style="{ color: iconColour }"/>
+                  </v-btn>
+                  <v-btn
+                      color="indigo"
+                      href="http://google.com"
+                      icon
+                      target="_blank"
+                  >
+                    <em class="fa-2x fas fa-link" v-bind:style="{ color: iconColour }"/>
+                  </v-btn>
+                </v-card-actions>
 
-            <div class="grey--text ms-4">
-              4.5 (413)
-            </div>
-          </v-row>
 
-          <div class="my-4 text-subtitle-1">
-            $ • Italian, Cafe
-          </div>
-
-          <div>Small plates, salads & sandwiches - an intimate setting with 12 indoor seats plus
-            patio seating.
-          </div>
-        </v-card-text>
-
-
-        <v-divider class="mx-4"></v-divider>
-
-        <v-card-title>Tonight's availability</v-card-title>
-
-        <v-card-text>
-          <v-chip-group
-              v-model="selection"
-              active-class="deep-purple accent-4 white--text"
-              column
-          >
-            <v-chip>5:30PM</v-chip>
-
-            <v-chip>7:30PM</v-chip>
-
-            <v-chip>8:00PM</v-chip>
-
-            <v-chip>9:00PM</v-chip>
-          </v-chip-group>
-        </v-card-text>
-
-        <v-card-actions>
-          <v-btn
-              color="deep-purple lighten-2"
-              text
-              @click="reserve"
-          >
-            Reserve
-          </v-btn>
-        </v-card-actions>
-      </v-card>
-      <v-card
-          :loading="loading"
-          class="mx-auto my-12"
-          max-width="374"
-      >
-        <template slot="progress">
-          <v-progress-linear
-              color="deep-purple"
-              height="10"
-              indeterminate
-          ></v-progress-linear>
-        </template>
-
-        <v-img
-            height="250"
-            src="https://cdn.vuetifyjs.com/images/cards/cooking.png"
-        ></v-img>
-
-        <v-card-title>Cafe Badilico</v-card-title>
-
-        <v-card-text>
-          <v-row
-              align="center"
-              class="mx-0"
-          >
-            <v-rating
-                :value="4.5"
-                color="amber"
-                dense
-                half-increments
-                readonly
-                size="14"
-            ></v-rating>
-
-            <div class="grey--text ms-4">
-              4.5 (413)
-            </div>
-          </v-row>
-
-          <div class="my-4 text-subtitle-1">
-            $ • Italian, Cafe
-          </div>
-
-          <div>Small plates, salads & sandwiches - an intimate setting with 12 indoor seats plus
-            patio seating.
-          </div>
-        </v-card-text>
-
-        <v-divider class="mx-4"></v-divider>
-
-        <v-card-title>Tonight's availability</v-card-title>
-
-        <v-card-text>
-          <v-chip-group
-              v-model="selection"
-              active-class="deep-purple accent-4 white--text"
-              column
-          >
-            <v-chip>5:30PM</v-chip>
-
-            <v-chip>7:30PM</v-chip>
-
-            <v-chip>8:00PM</v-chip>
-
-            <v-chip>9:00PM</v-chip>
-          </v-chip-group>
-        </v-card-text>
-
-        <v-card-actions>
-          <v-btn
-              color="deep-purple lighten-2"
-              text
-              @click="reserve"
-          >
-            Reserve
-          </v-btn>
-        </v-card-actions>
-      </v-card>
+              </v-card-text>
+            </v-card>
+          </v-flex>
+        </v-layout>
+      </v-layout>
     </v-container>
   </v-container>
 </template>
@@ -271,5 +171,9 @@ export default {
 
 .container {
   max-width: 100% !important;
+}
+
+.skinny {
+  max-width: 80%;
 }
 </style>

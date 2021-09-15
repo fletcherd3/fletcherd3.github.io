@@ -2,7 +2,7 @@
   <v-container style="padding:0">
     <v-overlay
         :value="drawer"
-        opacity="0.05"
+        opacity="0.15"
         z-index="4"
     >
     </v-overlay>
@@ -30,6 +30,7 @@
             v-for="item in items"
             :key="item.title"
             link
+            @click="scroll(item.componentId)"
         >
           <v-list-item-icon>
             <v-icon>{{ item.icon }}</v-icon>
@@ -63,10 +64,17 @@ export default {
     return {
       drawer: false,
       items: [
-        {title: 'Dashboard', icon: 'mdi-view-dashboard'},
-        {title: 'Photos', icon: 'mdi-image'},
-        {title: 'About', icon: 'mdi-help-box'},
+        {title: 'Quick Links', icon: 'mdi-link-variant', componentId: 'quick-links'},
+        {title: 'Projects', icon: 'mdi-file-code', componentId: 'projects'}
       ]
+    }
+  },
+  methods: {
+    scroll(id) {
+      document.getElementById(id).scrollIntoView({
+        behavior: "smooth"
+      });
+      this.drawer = false;
     }
   }
 }
