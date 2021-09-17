@@ -19,9 +19,26 @@
         <headline text="Fletcher Dick"/>
       </v-row>
       <v-row class="my-1" justify="center">📍 Christchurch, New Zealand</v-row>
-      <v-row class="text-center" justify="center">
+      <v-row class="text-center my-1" justify="center">
         Welcome to my portfolio! There's going to be a lot changing around here 😮
       </v-row>
+      <v-row class="my-1" justify="center">
+        <a :href="`mailto:${email}`">
+          {{ email }}
+        </a>
+      </v-row>
+      <v-layout class="justify-center" row>
+        <v-btn
+            v-for="(link, index) in links"
+            :key="index"
+            :href="link.href"
+            color="indigo"
+            icon
+            target="_blank"
+        >
+          <em :class="link.iconClass" class="fa-2x" v-bind:style="{ color: iconColour }"/>
+        </v-btn>
+      </v-layout>
       <v-row class="mt-10" justify="center">
         <!-- Link created at https://sites.google.com/site/gdocs2direct/home -->
         <v-btn
@@ -42,29 +59,7 @@
       </v-row>
     </v-container>
 
-    <v-container id="quick-links" class="py-7">
-      <v-row justify="center">
-        <h4>Quick Links</h4>
-      </v-row>
-      <v-row class="mx-sm-16">
-        <v-col
-            v-for="(link, index) in links" :key="index"
-            align="center"
-            cols="12"
-            justify="center"
-            sm="4"
-        >
-          <a :href="link.href" target="_blank">
-            <em :class="link.iconClass" align="center" class="pr-2 pb-1 icon fa-lg"
-                v-bind:style="{ color: iconColour }"/>
-            <span>{{ link.text }}</span>
-          </a>
-        </v-col>
-
-      </v-row>
-    </v-container>
-
-    <v-container id="projects" class="pt-7 elevation-8 justify-center">
+    <v-container id="projects" class="pt-7 justify-center">
       <v-row class="mb-4" justify="center">
         <h1>My Projects</h1>
       </v-row>
@@ -124,6 +119,7 @@
 
       </v-row>
     </v-container>
+
     <v-container class="py-7">
       <v-row justify="center">
         <h4>Timeline</h4>
@@ -150,15 +146,10 @@ export default {
     Headline
   },
   data() {
-    let email = 'fletcherjdick@gmail.com';
     return {
       iconColour: 'indigo',
+      email: 'fletcherjdick@gmail.com',
       links: [
-        {
-          iconClass: 'fas fa-paper-plane',
-          href: 'mailto:' + email,
-          text: email
-        },
         {
           iconClass: 'fab fa-linkedin',
           href: 'https://www.linkedin.com/in/fletcher-dick-2b9b361b1/'
