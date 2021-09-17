@@ -64,65 +64,67 @@
       </v-row>
     </v-container>
 
-    <v-container id="projects" class="pt-7 elevation-8">
+    <v-container id="projects" class="pt-7 elevation-8 justify-center">
       <v-row class="mb-4" justify="center">
         <h1>My Projects</h1>
       </v-row>
-      <v-layout justify-center>
-        <v-layout :class="{'skinny': $vuetify.breakpoint.smAndUp}" justify-center row
-                  style="{'max-width': '100%';}">
-          <v-flex
-              v-for="x in 5"
-              :key="x"
-              class="col-12 col-md-6"
-          >
-            <v-card>
-              <v-img
-                  height="250"
-                  src="https://cdn.vuetifyjs.com/images/cards/cooking.png"
-              ></v-img>
-              <v-card-title>Project name</v-card-title>
-              <v-card-text>
-                <v-row align="center mx-0">
-                  <v-chip
-                      v-for="x in 3"
-                      :key="x"
-                      :color="iconColour"
-                      class="mr-1"
-                      outlined
-                      small
-                  >
-                    Tech {{ x }}
-                  </v-chip>
-                </v-row>
-                <v-card-subtitle class="px-0">Small plates, salads & sandwiches - an intimate
-                  setting with 12 indoor seats plus patio seating
-                </v-card-subtitle>
-                <v-card-actions>
-                  <v-btn
-                      color="indigo"
-                      href="http://google.com"
-                      icon
-                      target="_blank"
-                  >
-                    <em class="fa-2x fab fa-github" v-bind:style="{ color: iconColour }"/>
-                  </v-btn>
-                  <v-btn
-                      color="indigo"
-                      href="http://google.com"
-                      icon
-                      target="_blank"
-                  >
-                    <em class="fa-2x fas fa-link" v-bind:style="{ color: iconColour }"/>
-                  </v-btn>
-                </v-card-actions>
+      <v-row
+          :class="{'skinny': $vuetify.breakpoint.smAndUp}"
+          justify="center"
+      >
+        <v-col
+            v-for="x in 5"
+            :key="x"
+            cols="12"
+            md="6"
+        >
+          <v-card>
+            <v-img
+                height="250"
+                src="https://cdn.vuetifyjs.com/images/cards/cooking.png"
+            ></v-img>
+            <v-card-title>Project name</v-card-title>
+            <v-card-text>
+              <v-row align="center mx-0">
+                <v-chip
+                    v-for="x in 3"
+                    :key="x"
+                    :color="iconColour"
+                    class="mr-1"
+                    outlined
+                    small
+                >
+                  Tech {{ x }}
+                </v-chip>
+              </v-row>
+              <v-card-subtitle class="px-0">Small plates, salads & sandwiches - an intimate
+                setting with 12 indoor seats plus patio seating
+              </v-card-subtitle>
+              <v-card-actions>
+                <v-btn
+                    color="indigo"
+                    href="http://google.com"
+                    icon
+                    target="_blank"
+                >
+                  <em class="fa-2x fab fa-github" v-bind:style="{ color: iconColour }"/>
+                </v-btn>
+                <v-btn
+                    color="indigo"
+                    href="http://google.com"
+                    icon
+                    target="_blank"
+                >
+                  <em class="fa-2x fas fa-link" v-bind:style="{ color: iconColour }"/>
+                </v-btn>
+              </v-card-actions>
 
 
-              </v-card-text>
-            </v-card>
-          </v-flex>
-        </v-layout>
-      </v-layout>
+            </v-card-text>
+          </v-card>
+        </v-col>
+
+      </v-row>
     </v-container>
     <v-container class="py-7">
       <v-row justify="center">
@@ -189,6 +191,7 @@ export default {
 }
 
 .skinny {
-  max-width: 80%;
+  margin-left: 15%;
+  margin-right: 15%;
 }
 </style>
