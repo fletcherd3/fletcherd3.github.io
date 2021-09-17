@@ -118,8 +118,6 @@
                   <em class="fa-2x fas fa-link" v-bind:style="{ color: iconColour }"/>
                 </v-btn>
               </v-card-actions>
-
-
             </v-card-text>
           </v-card>
         </v-col>
