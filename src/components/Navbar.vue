@@ -64,8 +64,8 @@ export default {
     return {
       drawer: false,
       items: [
-        {title: 'Quick Links', icon: 'mdi-link-variant', componentId: 'quick-links'},
-        {title: 'Projects', icon: 'mdi-file-code', componentId: 'projects'}
+        {title: 'Projects', icon: 'mdi-file-code', componentId: 'projects'},
+        {title: 'Timeline', icon: 'mdi-timeline-clock', componentId: 'timeline'},
       ]
     }
   },

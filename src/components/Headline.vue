@@ -25,6 +25,7 @@ export default {
   animation: hue 5s infinite alternate;
   line-height: 1.1;
   font-size: 5rem;
+  font-weight: normal
 }
 
 @keyframes hue {

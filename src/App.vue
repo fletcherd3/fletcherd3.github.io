@@ -38,4 +38,8 @@ export default {
   color: #2c3e50;
   height: auto;
 }
+
+#app a {
+  text-decoration: none;
+}
 </style>
