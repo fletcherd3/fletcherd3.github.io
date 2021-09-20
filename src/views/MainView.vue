@@ -23,9 +23,13 @@
             <headline text="Fletcher Dick"/>
           </v-row>
           <v-row class="my-1" justify="center">📍 Christchurch, New Zealand</v-row>
-          <v-row class="text-center my-1" justify="center">
-            Welcome to my portfolio! There's going to be a lot changing around here 😮
-          </v-row>
+          <v-theme-provider dark>
+            <v-row class="text-center my-1" justify="center">
+              Welcome to my portfolio! There's going to be a lot changing around here 😮
+
+            </v-row>
+          </v-theme-provider>
+
           <v-row class="my-1" justify="center">
             <a :href="`mailto:${email}`">
               {{ email }}
@@ -53,7 +57,6 @@
             >
               <v-icon
                   class="pr-5"
-                  dark
                   right
               >
                 mdi-download
@@ -62,8 +65,8 @@
             </v-btn>
           </v-row>
         </v-col>
+        <dark-mode-toggle style="position:absolute; top:5px; right:5px;"/>
       </v-row>
-
     </v-container>
 
     <v-container id="projects" class="py-7 justify-center">
@@ -101,16 +104,18 @@
 </template>
 
 <script>
-import Headline from '../components/Headline.vue'
+import Headline from '@/components/Headline.vue'
 import ProjectCard from "@/components/ProjectCard";
 import Timeline from "@/components/Timeline";
+import DarkModeToggle from "@/components/DarkModeToggle";
 
 export default {
   name: 'MainView',
   components: {
     Timeline,
     ProjectCard,
-    Headline
+    Headline,
+    DarkModeToggle
   },
   data() {
     return {
