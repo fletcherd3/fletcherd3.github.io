@@ -23,7 +23,7 @@
 <script>
 
 export default {
-  name: 'Timeline',
+  name: 'DarkModeToggle',
   data() {
     return {}
   },
