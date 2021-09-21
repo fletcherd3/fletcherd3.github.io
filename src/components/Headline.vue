@@ -22,7 +22,7 @@ export default {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-align: center;
-  animation: hue 5s infinite alternate;
+  animation: hue 5s infinite;
   line-height: 1.1;
   font-size: 5rem;
   font-weight: normal

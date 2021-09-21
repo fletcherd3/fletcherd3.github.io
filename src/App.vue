@@ -3,7 +3,6 @@
     <v-main id="app" class="pt-0">
       <Navbar/>
       <main-view/>
-      <Footer/>
     </v-main>
   </v-app>
 </template>
@@ -11,13 +10,11 @@
 <script>
 import MainView from './views/MainView.vue';
 import Navbar from './components/Navbar';
-import Footer from "@/components/Footer";
 
 export default {
   name: 'App',
 
   components: {
-    Footer,
     MainView,
     Navbar
   },
@@ -28,6 +25,21 @@ export default {
   beforeMount() {
     console.log("%cHey! What do you think you're doing back here?",
         "color: orange; font-family: sans-serif; font-size: 2em; font-weight: bolder;");
+  },
+  mounted() {
+    const darkThemeMq = window.matchMedia("(prefers-color-scheme: dark)");
+    if (darkThemeMq.matches) {
+      this.$vuetify.theme.dark = true;
+    } else {
+      this.$vuetify.theme.dark = false;
+    }
+    darkThemeMq.addListener(e => {
+      if (e.matches) {
+        this.$vuetify.theme.dark = true;
+      } else {
+        this.$vuetify.theme.dark = false;
+      }
+    });
   }
 
 };
