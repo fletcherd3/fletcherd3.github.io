@@ -9,6 +9,7 @@ export default new Vuetify({
     options: {
       customProperties: true,
     },
+    // Number 2 : https://visme.co/blog/website-color-schemes/
     themes: {
       light: {
         primary: '#f64c72',

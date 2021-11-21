@@ -49,7 +49,8 @@
         :collapse="!drawer"
         flat
         :style="[drawer ? {} : {'width': '58px'}]"
-        dark
+        :dark="!this.$vuetify.theme.dark"
+        :light="this.$vuetify.theme.dark"
         dense
     >
       <v-app-bar-nav-icon @click.stop="drawer = !drawer"/>
