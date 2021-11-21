@@ -22,14 +22,25 @@
           <v-row class="mb-10" justify="center">
             <headline text="Fletcher Dick"/>
           </v-row>
-          <v-row class="my-1" justify="center">📍 Christchurch, New Zealand</v-row>
-          <v-theme-provider dark>
-            <v-row class="text-center my-1" justify="center">
-              Welcome to my portfolio! There's going to be a lot changing around here 😮
-
-            </v-row>
-          </v-theme-provider>
-
+          <v-row class="text-center my-1" justify="center" v-html="introText"/>
+          <v-row class="my-1 mt-4" justify="center">📍 Christchurch, New Zealand</v-row>
+          <v-row class="my-1" justify="center">
+            <!-- Link created at https://sites.google.com/site/gdocs2direct/home -->
+            <v-btn
+                class="ma-2"
+                color="primary"
+                href="https://drive.google.com/uc?export=download&id=1T52ddLla1RzZbpn6I2t98Gqaox38gin2"
+                outlined
+            >
+              <v-icon
+                  class="pr-5"
+                  right
+              >
+                mdi-download
+              </v-icon>
+              Download CV
+            </v-btn>
+          </v-row>
           <v-row class="my-1" justify="center">
             <a :href="`mailto:${email}`">
               {{ email }}
@@ -47,23 +58,6 @@
               <em :class="link.iconClass" class="fa-2x"/>
             </v-btn>
           </v-layout>
-          <v-row class="mt-10" justify="center">
-            <!-- Link created at https://sites.google.com/site/gdocs2direct/home -->
-            <v-btn
-                class="ma-2"
-                color="primary"
-                href="https://drive.google.com/uc?export=download&id=1T52ddLla1RzZbpn6I2t98Gqaox38gin2"
-                outlined
-            >
-              <v-icon
-                  class="pr-5"
-                  right
-              >
-                mdi-download
-              </v-icon>
-              Download CV
-            </v-btn>
-          </v-row>
         </v-col>
         <dark-mode-toggle style="position:absolute; top:5px; right:5px;"/>
       </v-row>
@@ -119,6 +113,9 @@ export default {
   },
   data() {
     return {
+      introText: "Hi! I'm a Software Engineer with experience in creating modern web apps and RESTful API's to solve real problems"
+          +
+          "</br>I'm also spending my time learning/sucking-at Guitar 🎸 & Golf 🏌",
       email: 'fletcherjdick@gmail.com',
       links: [
         {
