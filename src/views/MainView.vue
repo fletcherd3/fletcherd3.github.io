@@ -40,18 +40,18 @@
                 v-for="(link, index) in links"
                 :key="index"
                 :href="link.href"
-                color="indigo"
+                color="secondary"
                 icon
                 target="_blank"
             >
-              <em :class="link.iconClass" class="fa-2x" v-bind:style="{ color: iconColour }"/>
+              <em :class="link.iconClass" class="fa-2x"/>
             </v-btn>
           </v-layout>
           <v-row class="mt-10" justify="center">
             <!-- Link created at https://sites.google.com/site/gdocs2direct/home -->
             <v-btn
                 class="ma-2"
-                color="indigo"
+                color="primary"
                 href="https://drive.google.com/uc?export=download&id=1T52ddLla1RzZbpn6I2t98Gqaox38gin2"
                 outlined
             >
@@ -119,7 +119,6 @@ export default {
   },
   data() {
     return {
-      iconColour: 'indigo',
       email: 'fletcherjdick@gmail.com',
       links: [
         {

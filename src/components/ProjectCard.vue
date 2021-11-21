@@ -10,7 +10,7 @@
         <v-chip
             v-for="x in 3"
             :key="x"
-            :color="iconColour"
+            color="primary"
             class="mr-1"
             outlined
             small
@@ -23,20 +23,20 @@
       </v-card-subtitle>
       <v-card-actions>
         <v-btn
-            color="indigo"
             href="http://google.com"
             icon
             target="_blank"
+            color="secondary"
         >
-          <em class="fa-2x fab fa-github" v-bind:style="{ color: iconColour }"/>
+          <em class="fa-2x fab fa-github"/>
         </v-btn>
         <v-btn
-            color="indigo"
             href="http://google.com"
             icon
             target="_blank"
+            color="secondary"
         >
-          <em class="fa-2x fas fa-link" v-bind:style="{ color: iconColour }"/>
+          <em class="fa-2x fas fa-link"/>
         </v-btn>
       </v-card-actions>
     </v-card-text>
@@ -45,11 +45,6 @@
 
 <script>
 export default {
-  name: 'ProjectCard',
-  data() {
-    return {
-      iconColour: 'indigo',
-    }
-  }
+  name: 'ProjectCard'
 }
 </script>
