@@ -72,12 +72,12 @@
           justify="center"
       >
         <v-col
-            v-for="x in 3"
-            :key="x"
+            v-for="project in projects"
+            :key="project.title"
             cols="12"
             md="6"
         >
-          <project-card/>
+          <project-card :project="project"/>
         </v-col>
       </v-row>
     </v-container>
@@ -102,6 +102,7 @@ import Headline from '@/components/Headline.vue'
 import ProjectCard from "@/components/ProjectCard";
 import Timeline from "@/components/Timeline";
 import DarkModeToggle from "@/components/DarkModeToggle";
+import projectsJson from '../projects.json';
 
 export default {
   name: 'MainView',
@@ -126,7 +127,8 @@ export default {
           iconClass: 'fab fa-github',
           href: 'https://github.com/fletcherd3'
         }
-      ]
+      ],
+      projects: projectsJson.projects
     }
   }
 }

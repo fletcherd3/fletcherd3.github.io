@@ -1,0 +1,61 @@
+{
+  "projects": [
+    {
+      "title": "This site!",
+      "technologies": [
+        "Vue",
+        "SEO",
+        "GitHub Pages"
+      ],
+      "description": "",
+      "imageNames": [
+        "portfolio.png"
+      ],
+      "githubLink": "",
+      "demoLink": ""
+    },
+    {
+      "title": "Buzzy Card",
+      "technologies": [
+        "React",
+        "Node",
+        "Express",
+        "MongoDB"
+      ],
+      "description": "BuzzyCard is \"SmartCard\" business card alternative created as a project to show my skills and interests in building a full-stack web application.</br>The application is a MERN stack (thats MongoDB, Express, React, and Node.js) that uses a cards NFC (or QR code) to open a customised profile page for the user. ",
+      "imageNames": [
+        "buzzycard1.jpeg",
+        "buzzycard.gif"
+      ],
+      "githubLink": "https://github.com/fletcherd3/buzzycard",
+      "demoLink": ""
+    },
+    {
+      "title": "Nutrisave",
+      "technologies": [
+      ],
+      "description": "",
+      "imageNames": [],
+      "githubLink": "",
+      "demoLink": ""
+    },
+    {
+      "title": "Popsicle",
+      "technologies": [
+      ],
+      "description": "",
+      "imageNames": [],
+      "githubLink": "",
+      "demoLink": ""
+    },
+    {
+      "title": "TradeMe Thing",
+      "technologies": [
+      ],
+      "description": "",
+      "imageNames": [],
+      "githubLink": "",
+      "demoLink": ""
+    }
+  ]
+}

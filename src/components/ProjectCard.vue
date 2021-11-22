@@ -1,40 +1,50 @@
 <template>
   <v-card>
-    <v-img
-        height="250"
-        src="https://cdn.vuetifyjs.com/images/cards/cooking.png"
-    ></v-img>
-    <v-card-title>Project name</v-card-title>
+    <v-carousel
+        :hideDelimiters="!(this.project.imageNames.length > 1)"
+        :show-arrows="this.project.imageNames.length > 1"
+        cycle
+        height="400"
+        hide-delimiter-background
+        show-arrows-on-hover
+    >
+      <v-carousel-item
+          v-for="(item, i) in images"
+          :key="i"
+          :src="item"
+      />
+    </v-carousel>
+    <v-card-title>{{ this.project.title }}</v-card-title>
     <v-card-text>
       <v-row align="center" class="mx-0">
         <v-chip
-            v-for="x in 3"
-            :key="x"
-            color="primary"
+            v-for="technology in this.project.technologies"
+            :key="technology"
             class="mr-1"
+            color="primary"
             outlined
             small
         >
-          Tech {{ x }}
+          {{ technology }}
         </v-chip>
       </v-row>
-      <v-card-subtitle class="px-0">Small plates, salads & sandwiches - an intimate
-        setting with 12 indoor seats plus patio seating
-      </v-card-subtitle>
+      <v-card-subtitle class="px-0" v-html="this.project.description"/>
       <v-card-actions>
         <v-btn
-            href="http://google.com"
+            v-if="this.project.githubLink"
+            :href="this.project.githubLink"
+            color="secondary"
             icon
             target="_blank"
-            color="secondary"
         >
           <em class="fa-2x fab fa-github"/>
         </v-btn>
         <v-btn
-            href="http://google.com"
+            v-if="this.project.demoLink"
+            :href="this.project.demoLink"
+            color="secondary"
             icon
             target="_blank"
-            color="secondary"
         >
           <em class="fa-2x fas fa-link"/>
         </v-btn>
@@ -45,6 +55,25 @@
 
 <script>
 export default {
-  name: 'ProjectCard'
+  name: 'ProjectCard',
+  props: {
+    project: {
+      type: Object,
+      required: true
+    }
+  },
+  data() {
+    return {
+      images: this.test(this.project.imageNames)
+    }
+  },
+  methods: {
+    test(imageNames) {
+      let i = [];
+      imageNames.forEach(imageName => i.push(require(`../assets/${imageName}`)));
+
+      return i;
+    }
+  }
 }
 </script>
