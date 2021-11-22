@@ -4,7 +4,7 @@
         :hideDelimiters="!(this.project.imageNames.length > 1)"
         :show-arrows="this.project.imageNames.length > 1"
         cycle
-        height="400"
+        height="300"
         hide-delimiter-background
         show-arrows-on-hover
     >

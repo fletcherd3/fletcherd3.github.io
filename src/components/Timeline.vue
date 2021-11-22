@@ -25,7 +25,7 @@
         <v-card-subtitle class="pt-0">
           {{ job.dateStart }} - {{ job.dateEnd }}
         </v-card-subtitle>
-        <v-card-text>
+        <v-card-text v-if="job.description">
           <ul>
             <li v-for="(paragraph, index) in job.description.split('\n')" :key="index">
               {{ paragraph }}

@@ -7,12 +7,12 @@
         "SEO",
         "GitHub Pages"
       ],
-      "description": "",
+      "description": "I built this site to showcase my design and web development skills while presenting a bit about myself!",
       "imageNames": [
+        "portfolio1.png",
         "portfolio.png"
       ],
-      "githubLink": "",
-      "demoLink": ""
+      "githubLink": "https://github.com/fletcherd3/fletcherd3.github.io"
     },
     {
       "title": "Buzzy Card",
@@ -28,32 +28,61 @@
         "buzzycard.gif"
       ],
       "githubLink": "https://github.com/fletcherd3/buzzycard",
-      "demoLink": ""
+      "demoLink": "https://www.buzzycard.nz"
     },
     {
       "title": "Nutrisave",
       "technologies": [
+        "Vue",
+        "Java",
+        "Spring Boot",
+        "MySQL",
+        "Jest",
+        "JUnit"
       ],
-      "description": "",
-      "imageNames": [],
-      "githubLink": "",
-      "demoLink": ""
+      "description": "Nutrisave is a sales platform for near-expiring goods with a focus on providing the user with health-related information on the products.</br>This was created over the course of a year in a team of six following agile methodologies.</br>Login details:</br>fdi19@uclive.ac.nz</br>fun123",
+      "imageNames": [
+        "nutrisave8.png",
+        "nutrisave7.png",
+        "nutrisave6.png",
+        "nutrisave4.png",
+        "nutrisave3.png",
+        "nutrisave2.png",
+        "nutrisave1.png"
+      ],
+      "githubLink": "https://gitlab.navbarpigeons.net/root/nutrisave",
+      "demoLink": "https://nutrisave.navbarpigeons.net/signin"
     },
     {
       "title": "Popsicle",
       "technologies": [
+        "Vue",
+        "Node",
+        "Express",
+        "MySQL",
+        "Heroku"
       ],
       "description": "",
-      "imageNames": [],
-      "githubLink": "",
-      "demoLink": ""
+      "imageNames": [
+        "popsicle.png",
+        "popsicle1.png",
+        "popsicle6.png",
+        "popsicle3.png",
+        "popsicle4.png",
+        "popsicle5.png"
+      ],
+      "githubLink": "https://github.com/fletcherd3/Popsicle-Event-Organiser",
+      "demoLink": "https://popsicle-client.herokuapp.com"
     },
     {
-      "title": "TradeMe Thing",
+      "title": "Trade Me ‘$1 reserve’ scraper ",
       "technologies": [
+        "Python"
       ],
-      "description": "",
-      "imageNames": [],
+      "description": "I created a Python web scraper that takes the dollar reserve auctions that are about to close and compares each listings price with other identical item prices, it then calculates a score on how ‘good of a deal’ it is. I have used this to buy an SLR camera for $1.  ",
+      "imageNames": [
+        "trademe.png"
+      ],
       "githubLink": "",
       "demoLink": ""
     }
