@@ -55,7 +55,10 @@ export default {
           dateStart: 'Nov 2021',
           dateEnd: 'Feb 2022',
           roleName: 'Software Engineer Intern',
-          description: '',
+          description: "Designed and built a Low-Latency High Frequency Trader in C++ competing against other teams of developers.\n"
+              +
+              "Worked on an internal tool to ease the Options Research team's workflow.\n" +
+              "Implemented feature requests and fixed bugs brought up by users of the internal tool.",
           logoSrc: optiver
         },
         {
