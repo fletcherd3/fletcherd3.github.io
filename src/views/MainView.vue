@@ -23,13 +23,13 @@
             <headline text="Fletcher Dick"/>
           </v-row>
           <v-row class="text-center my-1" justify="center" v-html="introText"/>
-          <v-row class="my-1 mt-4" justify="center">📍 Christchurch, New Zealand</v-row>
+          <v-row class="my-1 mt-4" justify="center">📍 Sydney, Australia</v-row>
           <v-row class="my-1" justify="center">
             <!-- Link created at https://sites.google.com/site/gdocs2direct/home -->
             <v-btn
                 class="ma-2"
                 color="primary"
-                href="https://drive.google.com/uc?export=download&id=1T52ddLla1RzZbpn6I2t98Gqaox38gin2"
+                href="https://drive.google.com/uc?export=download&id=1yV1wZyneXDeHfQKUH1aGLZce00VD__sE"
                 outlined
             >
               <v-icon
@@ -63,6 +63,21 @@
       </v-row>
     </v-container>
 
+    <v-container class="pb-10">
+      <v-row class="my-6" justify="center">
+        <h1 id="timeline">Experience</h1>
+      </v-row>
+      <v-row
+          :class="{'skinny': $vuetify.breakpoint.smAndUp}"
+          class="pa-3"
+          justify="center"
+      >
+        <timeline/>
+      </v-row>
+    </v-container>
+
+    <v-divider class="my-5"/>
+
     <v-container id="projects" class="py-7 justify-center">
       <v-row class="my-6" justify="center">
         <h1>Projects</h1>
@@ -81,19 +96,7 @@
         </v-col>
       </v-row>
     </v-container>
-    <v-divider class="my-5"/>
-    <v-container class="pb-10">
-      <v-row class="my-6" justify="center">
-        <h1 id="timeline">Experience</h1>
-      </v-row>
-      <v-row
-          :class="{'skinny': $vuetify.breakpoint.smAndUp}"
-          class="pa-3"
-          justify="center"
-      >
-        <timeline/>
-      </v-row>
-    </v-container>
+
   </v-container>
 </template>
 
@@ -113,15 +116,19 @@ export default {
     DarkModeToggle
   },
   data() {
+    const currentDate = new Date();
+    const feb2021Date = new Date('2021-02-01');
+    const yearsSinceFeb2021 = Math.floor((currentDate - feb2021Date) / (365.25 * 24 * 60 * 60 * 1000));
+
     return {
-      introText: "Hi! I'm a Software Engineer with experience in creating modern web apps and RESTful API's to solve real problems"
+      introText: `Hi! I'm a Software Engineer with ${yearsSinceFeb2021} years experience in driving technically sound solutions with a focus on the end-user`
           +
-          "</br>I'm also spending my time learning/sucking-at Guitar 🎸 & Golf 🏌",
+          "</br>My background spans Fintech, Healthcare, and Academic research. When I'm not coding, I'm spending my time learning (sucking at) Guitar 🎸 & Golf 🏌",
       email: 'fletcherjdick@gmail.com',
       links: [
         {
           iconClass: 'fab fa-linkedin',
-          href: 'https://www.linkedin.com/in/fletcher-dick-2b9b361b1/'
+          href: 'https://www.linkedin.com/in/fletcher-dick/'
         },
         {
           iconClass: 'fab fa-github',

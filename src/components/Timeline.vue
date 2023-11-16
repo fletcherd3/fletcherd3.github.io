@@ -41,6 +41,7 @@
 const anz = require('../assets/anz.jpeg');
 const optiver = require('../assets/optiver.jpeg');
 const ryman = require('../assets/ryman.png');
+const uni = require('../assets/uni.png');
 
 export default {
   name: 'Timeline',
@@ -52,13 +53,35 @@ export default {
           companyName: 'Optiver',
           site: 'https://www.optiver.com/',
           location: 'Sydney, Australia',
+          dateStart: 'Feb 2023',
+          dateEnd: 'Present',
+          roleName: 'Graduate Software Engineer',
+          description: "Leading projects through all stages of the SDLC, ensuring timely delivery by collaborating with developers and non-technical stakeholders.\n" +
+              "Contributing to large-scale C++ codebases, emphasising precision where each microsecond matters.\n" +
+              "Proactively expanding responsibilities, showcasing eagerness for continuous learning. Regularly deepening understanding of C++, actively contributing to team success.",
+          logoSrc: optiver
+        },
+        {
+          companyName: 'University of Canterbury',
+          site: 'https://www.canterbury.ac.nz/',
+          location: 'Christchurch, New Zealand',
+          dateStart: 'Feb 2022',
+          dateEnd: 'Feb 2023',
+          roleName: 'Full Stack Developer',
+          description: "Led the development of a speech analysis application automating error pattern detection in children’s speech, transforming it from an MVP to a productionised web application with beta users.\n" +
+              "Developed Python algorithms, significantly reducing error pattern analysis time from hours to seconds.\n" +
+              "Implemented UX-enhancing features with React and extended functionality with Node.js/Express RESTful API. Using PostgreSQL for our database.",
+          logoSrc: uni
+        },
+        {
+          companyName: 'Optiver',
+          site: 'https://www.optiver.com/',
+          location: 'Sydney, Australia',
           dateStart: 'Nov 2021',
           dateEnd: 'Feb 2022',
-          roleName: 'Software Engineer Intern',
-          description: "Designed and built a Low-Latency High Frequency Trader in C++ competing against other teams of developers.\n"
-              +
-              "Worked on an internal tool to ease the Options Research team's workflow.\n" +
-              "Implemented feature requests and fixed bugs brought up by users of the internal tool.",
+          roleName: 'Intern Software Engineer',
+          description: "Developed Jupyter notebook extension to streamline the Options Research team’s inadequate & manual process.\n" +
+              "Enabled researchers to format & export their research findings to our internal wiki to promote discussion.",
           logoSrc: optiver
         },
         {
@@ -67,10 +90,9 @@ export default {
           location: 'Wellingtion, New Zealand',
           dateStart: 'Nov 2020',
           dateEnd: 'Feb 2021',
-          roleName: 'Backend Developer Intern',
-          description: 'Working in a functioning Agile team adding functionality to large scale microservices.\n'
-              + 'Building, testing and deploying my own work to production systems.\n'
-              + 'Creating Docker Applications and deploying them to a containerisation platform (OpenShift)',
+          roleName: 'Intern Backend Developer',
+          description: 'Worked in an Agile team adding functionality to large-scale Java Spring Boot microservices.\n'
+              + 'Developed, dockerised and deployed my Spring Boot application to OpenShift allowing for auto-scaling.',
           logoSrc: anz
         },
         {
@@ -79,11 +101,8 @@ export default {
           location: 'Christchurch, New Zealand',
           dateStart: 'Nov 2019',
           dateEnd: 'Feb 2020',
-          roleName: 'Software Engineer Intern',
-          description: 'Delivered a greenfield scalable web-app which allows residents in Ryman rest homes to share and upload photos with their family.\n'
-              + 'Collaborated on all stages of systems development lifecycle, from requirement gathering to production releases.\n'
-              + 'I learnt web technologies such as ReactJs, OAuth and Googles Material UI framework.\n'
-              + 'As well as backend technologies such as GraphQL, C# for building API\'s and Docker for containerisation.',
+          roleName: 'InternSoftware Engineer',
+          description: 'Developed greenfield web application using C# (.Net Core) and React.js. Helped residents in retirement homes to share and upload photos with their families.',
           logoSrc: ryman
         }
       ]

@@ -65,8 +65,8 @@ export default {
     return {
       drawer: false,
       items: [
-        {title: 'Projects', icon: 'mdi-file-code', componentId: 'projects'},
         {title: 'Experience', icon: 'mdi-timeline-clock', componentId: 'timeline'},
+        {title: 'Projects', icon: 'mdi-file-code', componentId: 'projects'}
       ]
     }
   },
